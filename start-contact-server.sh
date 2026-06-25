@@ -3,7 +3,7 @@
 # Script to start the contact form handler server
 # This will run in the background and save messages to files
 
-PORTFOLIO_DIR="/home/sanamo/KarterSanamo"
+PORTFOLIO_DIR="/home/sanamo/Websites/KarterSanamo"
 PYTHON_SCRIPT="$PORTFOLIO_DIR/contact_handler.py"
 PID_FILE="$PORTFOLIO_DIR/contact_handler.pid"
 LOG_FILE="$PORTFOLIO_DIR/contact_handler.log"

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raid Riot — Karter Sanamo</title>
+    <meta name="description" content="Raid Riot: Spigot 1.8.8 faction raiding event plugin with queue, voting, breach detection, spectators, and async world restore.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles.css?v=3.1">
+    <link rel="stylesheet" href="/project-detail.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="project-detail-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-initials">KS</span>
+                <span class="logo-name">Karter Sanamo</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+                <li><a href="/#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main class="pd-main">
+        <header class="pd-hero">
+            <div class="container">
+                <div class="pd-hero-inner">
+                    <a href="/projects" class="pd-back">← All projects</a>
+                    <p class="pd-eyebrow">Minecraft · Spigot · Factions</p>
+                    <h1 class="pd-title">Raid Riot</h1>
+                    <p class="pd-lead">Spigot 1.8.8 faction raiding event plugin. Two teams compete in a dedicated arena—the first to breach the enemy base wins, or the team with greater wall penetration when time expires.</p>
+                    <div class="pd-meta">
+                        <span class="pd-meta-pill">Java</span>
+                        <span class="pd-meta-pill">Spigot 1.8.8</span>
+                        <span class="pd-meta-pill">SaberFactions</span>
+                        <span class="pd-meta-pill">WorldEdit (optional)</span>
+                    </div>
+                    <div class="pd-actions">
+                        <a class="pd-btn pd-btn--primary" href="https://github.com/kartersanamo/Raid-Riot" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container pd-body">
+            <section class="pd-section">
+                <h2>Why this project</h2>
+                <p>Faction servers need structured PvP events that feel fair, repeatable, and operator-friendly. Raid Riot automates the full match lifecycle—from queue and team assignment through arena setup, live breach tracking, and terrain restore—so staff can run competitive raiding events without manual world cleanup or ad-hoc rule enforcement.</p>
+            </section>
+
+            <section class="pd-section">
+                <h2>Event lifecycle</h2>
+                <p>Matches flow through a defined state machine: <code>IDLE → QUEUE_OPEN → QUEUE_LOCKED → [VOTING] → PREPARING → COUNTDOWN → ACTIVE → ENDING → RESTORING</code>. Voting is skipped when fixed match settings are enabled in config. Admins can stop a session at any point.</p>
+            </section>
+
+            <section class="pd-section">
+                <h2>What I built</h2>
+                <ul class="pd-list">
+                    <li><strong>Queue system</strong> — Random mode assigns teams when the queue locks at capacity or countdown expiry; Faction mode fills teams from the first two factions to reach <code>players-per-team</code> members.</li>
+                    <li><strong>Voting GUI</strong> — Participants vote for base difficulty (Easy, Medium, Hard schematic, or live faction base copy) and kit (predefined or own inventory at match start).</li>
+                    <li><strong>Arena preparation</strong> — Schematic or faction-base paste, system faction claims, world border resize, inventory/location snapshots, and kit application at countdown end.</li>
+                    <li><strong>Match rules</strong> — Breach and depth-based win conditions, TNT attribution, virtual death with timed respawn, building restrictions, and in-match <code>/f claim</code> routed to event team factions.</li>
+                    <li><strong>Spectator mode</strong> — Non-participants spectate via GUI with player-head teleport; full state snapshot on enter/leave.</li>
+                    <li><strong>Async world restore</strong> — Block deltas tracked as non-air chunk snapshots and restored after matches with configurable blocks/chunks per tick.</li>
+                </ul>
+            </section>
+
+            <div class="pd-grid-2">
+                <div class="pd-card">
+                    <h3>Win conditions</h3>
+                    <p><strong>Breach</strong> — attacker penetrates past the wall plane (depth ≥ 1). <strong>Depth</strong> — higher recorded wall penetration when the timer expires. <strong>Draw</strong> — equal depth when enabled. Admins can also force-stop a match.</p>
+                </div>
+                <div class="pd-card">
+                    <h3>Player interface</h3>
+                    <p><code>/raidriot</code> (<code>/rr</code>) opens queue, voting, match status, and spectator GUIs with live refresh. All messages and GUI strings live in <code>config.yml</code> via <code>ConfigManager</code>.</p>
+                </div>
+            </div>
+
+            <section class="pd-section" style="margin-top: 3rem;">
+                <h2>Technical notes</h2>
+                <p>SaberFactions is required at runtime via reflection; WorldEdit is optional for schematic paste. System factions (configurable tags such as Yellow/Red) claim base territory during events. Breach detection feeds from block breaks, explosions, and dispenser/spawn TNT attribution against each team's wall region. Combat toggles SaberFactions friendly-fire metadata so cross-team PvP works within the same event faction.</p>
+                <div class="pd-highlight"><strong>Result:</strong> A full-featured raiding event framework with operator controls, player-facing GUIs, configurable gameplay, and safe post-match terrain restore for production Factions servers.</div>
+            </section>
+
+            <footer class="pd-links-footer">
+                <h2>Links</h2>
+                <div class="pd-link-row">
+                    <a href="https://github.com/kartersanamo/Raid-Riot" target="_blank" rel="noopener noreferrer">Repository</a>
+                    <a href="https://github.com/kartersanamo/Raid-Riot/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation (README)</a>
+                    <a href="/projects">← Back to projects</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Karter Sanamo. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/script.js?v=3.1"></script>
+</body>
+</html>
