@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag Central — Karter Sanamo</title>
+    <meta name="description" content="Tag Central: a repository for tag aggregation and management.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles.css?v=3.1">
+    <link rel="stylesheet" href="/project-detail.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="project-detail-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-initials">KS</span>
+                <span class="logo-name">Karter Sanamo</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+                <li><a href="/#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main class="pd-main">
+        <header class="pd-hero">
+            <div class="container">
+                <div class="pd-hero-inner">
+                    <a href="/projects" class="pd-back">← All projects</a>
+                    <p class="pd-eyebrow">Featured project · Repository</p>
+                    <h1 class="pd-title">Tag Central</h1>
+                    <p class="pd-lead">Tag Central is a desktop Python app for managing vessel tags across Proficy and Cimplicity. It provides import dry-run previews, Cimplicity link reports, an export queue for prepared Proficy CSVs, merge & alignment tools, internal mismatch grouping, and automatic backups.</p>
+                    <div class="pd-meta">
+                        <span class="pd-meta-pill">Python</span>
+                        <span class="pd-meta-pill">Proficy · Cimplicity</span>
+                        <span class="pd-meta-pill">Pandas (on-demand)</span>
+                        <span class="pd-meta-pill pd-meta-pill--accent">Featured project</span>
+                    </div>
+                    <div class="pd-actions">
+                        <a class="pd-btn pd-btn--primary" href="https://github.com/kartersanamo/Tag-Central" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                        <a class="pd-btn pd-btn--ghost" href="https://github.com/kartersanamo/Tag-Central/blob/main/README.md" target="_blank" rel="noopener noreferrer">Read the README</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container pd-body">
+            <section class="pd-section">
+                <h2>Project summary</h2>
+                <p>This repository contains utilities and tools related to tag generation, normalization, and aggregation. Visit the repository for the full README and examples.</p>
+            </section>
+
+            <section class="pd-section">
+                <h2>What I built</h2>
+                <ul class="pd-list">
+                    <li><strong>Import analyzers</strong> - Proficy and Cimplicity importers with dry-run previews that surface matches, ambiguous rows, and suggested link actions.</li>
+                    <li><strong>Cimplicity link report</strong> - a post-import breakdown that matches by PT_ID, address, alias, and collects rows that require manual review.</li>
+                    <li><strong>Export queue</strong> - assemble, review, edit, and validate pending Proficy CSV exports grouped per vessel before writing files for re-import.</li>
+                    <li><strong>Internal mismatch grouping</strong> - detect groups (G/A/P) of tags with similar descriptions or addresses to help reconcile duplicates and near-duplicates.</li>
+                    <li><strong>Tag merge & align</strong> - merge two tags (one survives, one queued for Proficy export) and align descriptions to Cimplicity when appropriate.</li>
+                    <li><strong>Backups & auto-backup</strong> - manual backup/restore and automatic backups before large bulk operations to prevent data loss.</li>
+                    <li><strong>Desktop packaging</strong> - scripts and instructions to build platform installers (.app, .exe) and regenerate icons for branded releases.</li>
+                </ul>
+            </section>
+
+            <section class="pd-section">
+                <h2>Typical workflow</h2>
+                <ol class="pd-list">
+                    <li><strong>Import Proficy</strong> — run a dry-run preview then apply changes or resolve conflicts.</li>
+                    <li><strong>Import Cimplicity</strong> — preview link statistics, resolve sync dialog items, and review the link report.</li>
+                    <li><strong>Cimplicity review</strong> — create Proficy tags for unmatched Cimplicity points (queued for export).</li>
+                    <li><strong>Review export queue</strong> — verify pending Proficy rows grouped by vessel before export and optionally validate CSVs.</li>
+                    <li><strong>Export Proficy changes</strong> — write per-vessel batch CSVs for re-import into Proficy.</li>
+                    <li><strong>Complete Cimplicity tasks</strong> — perform manual HMI edits and mark tasks done in the manual task checklist.</li>
+                </ol>
+            </section>
+
+            <div class="pd-grid-2">
+                <div class="pd-card">
+                    <h3>Why it matters</h3>
+                    <p>Consistent tag identifiers make search, categorization, and automation more reliable across multiple projects and tools.</p>
+                </div>
+                <div class="pd-card">
+                    <h3>How to use</h3>
+                    <p>See the repository README for installation, usage examples, and integration tips for your own projects.</p>
+                </div>
+            </div>
+
+            <section class="pd-section" style="margin-top: 3rem;">
+                <h2>Technical notes</h2>
+                <p>The app uses a single canonical CSV (`tags.csv`) as the tag database and stores supporting JSON files such as `cimplicity_review_queue.json`, `cimplicity_manual_tasks.json`, and `alias_rules.json`. Exports are written beside the app in an `Exports/` folder and backups are kept under `backups/` in the app data location (`~/Library/Application Support/TagCenter/` on macOS or `%APPDATA%\TagCenter\` on Windows). Pandas is loaded only when importing/exporting Excel files to keep startup fast.</p>
+                <div class="pd-highlight"><strong>Result:</strong> Tag Central centralizes tag reconciliation across Proficy and Cimplicity workflows: Cimplicity acts as the source of truth when linked, while Proficy is updated via validated export CSVs and manual task lists.</div>
+            </section>
+
+            <footer class="pd-links-footer">
+                <h2>Links</h2>
+                <div class="pd-link-row">
+                    <a href="https://github.com/kartersanamo/Tag-Central" target="_blank" rel="noopener noreferrer">Repository</a>
+                    <a href="https://github.com/kartersanamo/Tag-Central/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation (README)</a>
+                    <a href="/projects">← Back to projects</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Karter Sanamo. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/script.js?v=3.1"></script>
+</body>
+</html>

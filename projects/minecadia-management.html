@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecadia Management — Karter Sanamo</title>
+    <meta name="description" content="Minecadia Management: Discord bot for moderation, analytics, YouTube checks, and staff tools on the Minecadia server.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles.css?v=3.1">
+    <link rel="stylesheet" href="/project-detail.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="project-detail-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-initials">KS</span>
+                <span class="logo-name">Karter Sanamo</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+                <li><a href="/#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main class="pd-main">
+        <header class="pd-hero">
+            <div class="container">
+                <div class="pd-hero-inner">
+                    <a href="/projects" class="pd-back">← All projects</a>
+                    <p class="pd-eyebrow">Discord · Python · Moderation</p>
+                    <h1 class="pd-title">Minecadia Management</h1>
+                    <p class="pd-lead">A Python Discord bot for internal management and moderation on the Minecadia server—timeouts, mention alerts, moderation logs, media checks, analytics, and staff tooling.</p>
+                    <div class="pd-meta">
+                        <span class="pd-meta-pill">discord.py</span>
+                        <span class="pd-meta-pill">Python</span>
+                        <span class="pd-meta-pill">MySQL</span>
+                        <span class="pd-meta-pill pd-meta-pill--accent">Live product</span>
+                    </div>
+                    <div class="pd-actions">
+                        <a class="pd-btn pd-btn--primary" href="https://github.com/kartersanamo/MinecadiaManagement" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                        <a class="pd-btn pd-btn--ghost" href="https://discord.com/invite/minecadia" target="_blank" rel="noopener noreferrer">Join Discord</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container pd-body">
+            <section class="pd-section">
+                <h2>Overview</h2>
+                <p>Management is the staff-facing bot in the Minecadia fleet: it enforces moderation workflows, keeps audit trails, and feeds analytics that power the <a href="/projects/bots">Bots dashboard</a>. Message events from this bot integrate with member engagement rollups and backfill pipelines.</p>
+            </section>
+
+            <section class="pd-section">
+                <h2>What I built</h2>
+                <ul class="pd-list">
+                    <li><strong>Moderation</strong> — timeouts, mention alerts, and structured moderation logs for accountability.</li>
+                    <li><strong>Media compliance</strong> — YouTube channel checker for submissions using the YouTube Data API.</li>
+                    <li><strong>Analytics</strong> — server analytics and member message tracking persisted to MySQL.</li>
+                    <li><strong>Staff commands</strong> — analysis and management commands scoped to roles and channels from config.</li>
+                    <li><strong>Layered codebase</strong> — same cog / service / repository layout as Utilities for maintainability across the fleet.</li>
+                </ul>
+            </section>
+
+            <div class="pd-grid-2">
+                <div class="pd-card">
+                    <h3>Configuration</h3>
+                    <p><code>.env</code> holds the Discord token, database credentials, and <code>YOUTUBE_API_KEY</code>. <code>assets/config.json</code> defines channels, roles, and embed settings without redeploying code.</p>
+                </div>
+                <div class="pd-card">
+                    <h3>Deployment</h3>
+                    <p><code>pip install -r requirements.txt</code>, configure <code>.env</code> from <code>.env.example</code>, then <code>python main.py</code> or <code>run.sh</code> on the production host alongside the rest of the Minecadia bots.</p>
+                </div>
+            </div>
+
+            <section class="pd-section" style="margin-top: 3rem;">
+                <h2>Technical notes</h2>
+                <p>Live message ingestion writes through the same deduplication paths used by dashboard analytics—so historical backfills and real-time counts stay consistent after deploys.</p>
+                <div class="pd-highlight"><strong>Takeaway:</strong> moderation bots need <em>observable</em> actions—every timeout, alert, and log entry should be traceable to config, staff role, and target context for disputes weeks later.</div>
+            </section>
+
+            <footer class="pd-links-footer">
+                <h2>Links</h2>
+                <div class="pd-link-row">
+                    <a href="https://github.com/kartersanamo/MinecadiaManagement" target="_blank" rel="noopener noreferrer">Repository</a>
+                    <a href="https://github.com/kartersanamo/MinecadiaManagement/blob/master/README.md" target="_blank" rel="noopener noreferrer">Documentation (README)</a>
+                    <a href="https://discord.com/invite/minecadia" target="_blank" rel="noopener noreferrer">Minecadia Discord</a>
+                    <a href="/projects">← Back to projects</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Karter Sanamo. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/script.js?v=3.1"></script>
+</body>
+</html>

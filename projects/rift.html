@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rift - Karter Sanamo</title>
+    <meta name="description" content="Rift: a production-ready Spigot warp plugin with GUI management, teleport effects, and robust YAML-backed persistence.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles.css?v=3.1">
+    <link rel="stylesheet" href="/project-detail.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="project-detail-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-initials">KS</span>
+                <span class="logo-name">Karter Sanamo</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+                <li><a href="/#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main class="pd-main">
+        <header class="pd-hero">
+            <div class="container">
+                <div class="pd-hero-inner">
+                    <a href="/projects" class="pd-back"><- All projects</a>
+                    <p class="pd-eyebrow">Minecraft - Java - Server tooling</p>
+                    <h1 class="pd-title">Rift</h1>
+                    <p class="pd-lead">Rift is a production-ready global warp plugin for Spigot servers, built around fast command flow, GUI-first management, configurable teleport UX, and resilient YAML persistence for real-world server operations.</p>
+                    <div class="pd-meta">
+                        <span class="pd-meta-pill">Spigot / Bukkit API</span>
+                        <span class="pd-meta-pill">Java 21</span>
+                        <span class="pd-meta-pill">Maven</span>
+                        <span class="pd-meta-pill pd-meta-pill--accent">Production ready</span>
+                    </div>
+                    <div class="pd-actions">
+                        <a class="pd-btn pd-btn--primary" href="https://github.com/kartersanamo/Rift" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                        <a class="pd-btn pd-btn--ghost" href="https://github.com/kartersanamo/Rift/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">Release v1.0.0</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container pd-body">
+            <section class="pd-section">
+                <h2>Why this project</h2>
+                <p>Many warp plugins stop at basic commands, but production servers need stronger guardrails: configurable teleport timing, informative validation, full GUI controls, and safe behavior when worlds or locations go missing. Rift was built to deliver that full operational layer.</p>
+            </section>
+
+            <section class="pd-section">
+                <h2>What I built</h2>
+                <ul class="pd-list">
+                    <li><strong>Complete warp lifecycle</strong> - create, update, browse, inspect, and delete warps through both commands and GUI actions.</li>
+                    <li><strong>Full command suite</strong> - <code>/setwarp</code>, <code>/warp</code>, <code>/deletewarp</code>, <code>/warps</code>, <code>/warpinfo</code>, and <code>/rift reload</code> with tab completion.</li>
+                    <li><strong>Interactive GUI workflow</strong> - browse warps, then edit name, material, description, category, and location through guided in-game flows.</li>
+                    <li><strong>Message-driven configuration</strong> - 130+ configurable keys in <code>messages.yml</code> with placeholders and fallback defaults.</li>
+                    <li><strong>Persistence and safety</strong> - YAML-backed warp metadata (creator, timestamp, usage count) with graceful loading and backup support.</li>
+                </ul>
+            </section>
+
+            <div class="pd-grid-2">
+                <div class="pd-card">
+                    <h3>Architecture</h3>
+                    <p>Rift separates framework utilities (chat, config, commands, GUI base classes) from plugin-specific modules (<code>warp</code>, command handlers, GUI screens). Shared validation and chat-input abstractions reduce duplicate logic across command and GUI paths.</p>
+                </div>
+                <div class="pd-card">
+                    <h3>Operator experience</h3>
+                    <p>Server owners can tune teleport delay effects, naming constraints, description limits, and all user-facing language without recompiling. The plugin also handles invalid world/location data gracefully instead of breaking startup.</p>
+                </div>
+            </div>
+
+            <section class="pd-section" style="margin-top: 3rem;">
+                <h2>Technical notes</h2>
+                <p>The project uses Java 21 + Maven with Spigot dependencies and a soft dependency on Multiverse-Core. GUI management includes pagination and admin utilities (stats, reload, timestamped backups), and teleports can be canceled on movement for safer gameplay flow.</p>
+                <div class="pd-highlight"><strong>Result:</strong> Rift reached a clean production-ready state with tested command wiring, GUI actions, configurable messaging, and stable package output for direct server deployment.</div>
+            </section>
+
+            <footer class="pd-links-footer">
+                <h2>Links</h2>
+                <div class="pd-link-row">
+                    <a href="https://github.com/kartersanamo/Rift" target="_blank" rel="noopener noreferrer">Repository</a>
+                    <a href="https://github.com/kartersanamo/Rift/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation (README)</a>
+                    <a href="/projects"><- Back to projects</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Karter Sanamo. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/script.js?v=3.1"></script>
+</body>
+</html>

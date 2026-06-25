@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karter Sanamo - Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles.css?v=3.1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-initials">KS</span>
+                <span class="logo-name">Karter Sanamo</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <img src="/images/profile.png" alt="Karter Sanamo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h1 class="name">Karter Sanamo</h1>
+                    <h2 class="title">Computer Science Student | Software Engineer</h2>
+                    <p class="description">
+                        I'm a passionate computer science student at Baylor University, specializing in software engineering. 
+                        My focus lies in creating innovative solutions through Minecraft Spigot Plugin Development, 
+                        Discord Bot Development, and developing high quality YouTube tutorials/showcases as well. I thrive on 
+                        building efficient, scalable applications and continuously expanding my technical expertise.
+                    </p>
+                    <div class="mission-statement">
+                        <h3>Mission Statement</h3>
+                        <p>
+                            To leverage my technical skills and creativity to develop impactful software solutions that 
+                            enhance user experiences and solve real-world problems. I'm committed to continuous learning, 
+                            clean code practices, and contributing to the tech community.
+                        </p>
+                    </div>
+                    <div class="education">
+                        <h3>Education</h3>
+                        <div class="education-item">
+                            <h4>Baylor University</h4>
+                            <p>Bachelor of Science in Computer Science</p>
+                            <p class="concentration">Concentration: Software Engineering</p>
+                        </div>
+                    </div>
+                    <div class="skills-section">
+                        <h3>Skills & Expertise</h3>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4>Specializations</h4>
+                                <ul>
+                                    <li>Minecraft Spigot Plugin Development</li>
+                                    <li>Discord Bot Development</li>
+                                    <li>YouTube Programming Tutorials</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Programming Languages</h4>
+                                <p class="skill-note">(Ranked by Confidence)</p>
+                                <ul>
+                                    <li>Java</li>
+                                    <li>Python</li>
+                                    <li>C++</li>
+                                    <li>Assembly</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Projects</h2>
+                    <p class="section-subtitle">A collection of my work and contributions</p>
+                </div>
+                <a href="/projects" class="see-all-btn">See All →</a>
+            </div>
+            <div class="carousel-wrapper">
+                <div class="carousel-container projects-carousel">
+                    <div class="carousel-track" id="projectsCarousel">
+                        <div class="project-card project-card--featured" data-project-detail="/projects/minecadia-music">
+                            <div class="project-badge">Featured project</div>
+                            <div class="project-header">
+                                <h3>Minecadia Music</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/kartersanamo/MinecadiaMusic" class="project-link">GitHub</a>
+                                    <a href="/projects/minecadia-music" class="project-link">Overview</a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Lavalink-powered Discord music bot: /music in-channel panel, web dashboard at music.kartersanamo.com, and Discord Activity support for YouTube and SoundCloud playback.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Featured</span>
+                                <span class="tag">Discord Bot</span>
+                                <span class="tag">Lavalink</span>
+                                <span class="tag">Dashboard</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card project-card--featured" data-project-detail="/projects/tag-central">
+                            <div class="project-badge">Featured project</div>
+                            <div class="project-header">
+                                <h3>Tag Central</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/kartersanamo/Tag-Central" class="project-link">GitHub</a>
+                                    <a href="/projects/tag-central" class="project-link">Overview</a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Desktop Python app to manage vessel tags between Proficy and Cimplicity: import previews, link reports, export queue, merge tools, validation, and backups.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Proficy</span>
+                                <span class="tag">Cimplicity</span>
+                                <span class="tag">Utilities</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card project-card--featured" data-project-detail="/projects/6-stars">
+                            <div class="project-badge">Featured project</div>
+                            <div class="project-header">
+                                <h3>Six Stars Hotel</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/kartersanamo/6-Stars" class="project-link">GitHub</a>
+                                    <a href="/projects/6-stars" class="project-link">Overview</a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                A single-property hotel desktop client built with Swing and SQLite, with role-based flows for guests, clerks, and administrators across reservations, billing, and account management.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Featured</span>
+                                <span class="tag">Desktop App</span>
+                                <span class="tag">Swing</span>
+                                <span class="tag">SQLite</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-project-detail="/projects/minecadia-games">
+                            <div class="project-header">
+                                <h3>Minecadia Games</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/kartersanamo/MinecadiaGames" class="project-link">GitHub</a>
+                                    <a href="https://discord.com/invite/minecadia" class="project-link">Discord</a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                A full leveling system for all members with a live-leaderboard, 10+ games, xp/level tracking, and so much more!
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Discord Bot</span>
+                                <span class="tag">Discord.py</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Games</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-project-detail="/projects/minecadia-tickets">
+                            <div class="project-header">
+                                <h3>Minecadia Tickets</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/kartersanamo/MinecadiaTickets" class="project-link">GitHub</a>
+                                    <a href="https://discord.com/invite/Minecadia" class="project-link">Discord</a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                The most advanced discord ticket system out with full customizability within discord, and a seemless user experience.    
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Discord Bot</span>
+                                <span class="tag">Discord.py</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Ticket Support</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-project-detail="/projects/bots">
+                            <div class="project-header">
+                                <h3>Minecadia Bots</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/kartersanamo/Bots" class="project-link">GitHub</a>
+                                    <a href="/projects/bots" class="project-link">Overview</a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Next.js dashboard for the Minecadia bot fleet: fleet controls, tickets, games admin, member analytics, and moderation—MySQL data plus a FastAPI control layer.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Next.js</span>
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">Discord</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-project-detail="/projects/minecadia-utilities">
+                            <div class="project-header">
+                                <h3>Minecadia Utilities</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/kartersanamo/MinecadiaUtilities" class="project-link">GitHub</a>
+                                    <a href="/projects/minecadia-utilities" class="project-link">Overview</a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Community utilities bot: polls, tags, suggestions, screenshare logging, message tracking, player counts, and Telegram integration for the Minecadia network.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Discord Bot</span>
+                                <span class="tag">discord.py</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Utilities</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-project-detail="/projects/minecadia-leader">
+                            <div class="project-header">
+                                <h3>Minecadia Leader</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/kartersanamo/MinecadiaLeader" class="project-link">GitHub</a>
+                                    <a href="/projects/minecadia-leader" class="project-link">Overview</a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Faction leader and staff bot: kitmap bundle ticket panel, channel lock/close/rename/purge, thread listing, and leader admin tools on the Minecadia Leader server.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Discord Bot</span>
+                                <span class="tag">discord.py</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Factions</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-project-detail="/projects/algovision">
+                            <div class="project-header">
+                                <h3>AlgoVision</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/kartersanamo/AlgoVision" class="project-link">GitHub</a>
+                                    <a href="https://youtu.be/0Du1ccKRRLU" class="project-link">Demo</a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                AlgoVision is a Spigot plugin that lets players select 3D regions in-game and run algorithm visualizations in real time. Watch sorting, searching, graph traversal, pathfinding, and more animate with blocks, particles, and sounds.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Minecraft Plugin</span>
+                                <span class="tag">Spigot/Bukkit</span>
+                                <span class="tag">Java</span>
+                                <span class="tag">Algorithm</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-project-detail="/projects/change-tables">
+                            <div class="project-header">
+                                <h3>Change Tables</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/kartersanamo/Change-Tables" class="project-link">GitHub</a>
+                                    <a href="/projects/change-tables" class="project-link">Overview</a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Transforms PLC export text files using configurable rules in rules.json—line replacements, global find-and-replace, and WORD_30 fallback—for ECO automation workflows.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">PLC</span>
+                                <span class="tag">Tkinter</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-project-detail="/projects/luxe">
+                            <div class="project-header">
+                                <h3>Luxe</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/kartersanamo/Luxe" class="project-link">GitHub</a>
+                                    <a href="#" class="project-link">Demo (N/A)</a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                A premium cosmetics plugin for Spigot that enhances your Minecraft server with stylish visual effects and customization options. Luxe provides players with unique cosmetic items while maintaining optimal performance through lightweight, efficient code.    
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Minecraft Plugin</span>
+                                <span class="tag">Spigot/Bukkit</span>
+                                <span class="tag">Java</span>
+                                <span class="tag">Cosmetics</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-project-detail="/projects/h0m3">
+                            <div class="project-header">
+                                <h3>H0M3</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/kartersanamo/H0M3" class="project-link">GitHub</a>
+                                    <a href="/projects/h0m3" class="project-link">Overview</a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                A Spigot/Paper plugin for multi-home management: set, rename, move, and teleport with a GUI, plus configurable delays, particles, sounds, and messages.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Minecraft Plugin</span>
+                                <span class="tag">Spigot/Paper</span>
+                                <span class="tag">Java</span>
+                                <span class="tag">Homes</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-project-detail="/projects/stash">
+                            <div class="project-header">
+                                <h3>Stash</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/kartersanamo/Stash" class="project-link">GitHub</a>
+                                    <a href="/projects/stash" class="project-link">Overview</a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                A GUI-first personal vault plugin roadmap for Spigot servers, focused on scalable player storage, permission-based tiers, strong persistence safety, and powerful admin tooling.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Minecraft Plugin</span>
+                                <span class="tag">Spigot/Bukkit</span>
+                                <span class="tag">Java</span>
+                                <span class="tag">Storage</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-project-detail="/projects/rift">
+                            <div class="project-header">
+                                <h3>Rift</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/kartersanamo/Rift" class="project-link">GitHub</a>
+                                    <a href="/projects/rift" class="project-link">Overview</a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                A production-ready Spigot warp plugin with full GUI warp management, configurable teleport effects and delays, YAML-backed persistence, and a message-driven architecture for server-wide customization.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Minecraft Plugin</span>
+                                <span class="tag">Spigot/Bukkit</span>
+                                <span class="tag">Java</span>
+                                <span class="tag">Warps</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-btn-prev" aria-label="Previous" data-carousel="projects">‹</button>
+                <button class="carousel-btn carousel-btn-next" aria-label="Next" data-carousel="projects">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Section -->
+    <section id="teaching" class="teaching-section">
+        <div class="container">
+            <h2 class="section-title">Teaching</h2>
+            <p class="section-subtitle">Video tutorials, coding walkthroughs, and educational content on software development</p>
+            <div class="teaching-grid">
+                <div class="teaching-card">
+                    <div class="teaching-content">
+                        <div class="teaching-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" fill="currentColor"/>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#000"/>
+                            </svg>
+                        </div>
+                        <h3>YouTube Channel</h3>
+                        <p>
+                            Watch video tutorials, coding walkthroughs, and educational content on software development. 
+                            Learn through visual demonstrations and step-by-step guides covering various programming topics 
+                            and project implementations.
+                        </p>
+                        <a href="https://www.youtube.com/@kartertsanamo" target="_blank" rel="noopener noreferrer" class="teaching-link">
+                            Visit Channel →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">I'm always open to discussing new opportunities and collaborations</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h4>Email</h4>
+                        <a href="mailto:kartersanamo@gmail.com" target="_blank" rel="noopener noreferrer">kartersanamo@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <h4>LinkedIn</h4>
+                        <a href="https://www.linkedin.com/in/kartersanamo/" target="_blank" rel="noopener noreferrer">linkedin.com/in/kartersanamo</a>
+                    </div>
+                    <div class="contact-item">
+                        <h4>GitHub</h4>
+                        <a href="https://github.com/kartersanamo" target="_blank" rel="noopener noreferrer">github.com/kartersanamo</a>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Social Media</h4>
+                        <div class="social-icons">
+                            <a href="https://www.youtube.com/@kartertsanamo" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="currentColor"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/kartersanamo/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="currentColor"/>
+                                </svg>
+                            </a>
+                            <a href="https://twitter.com/kartertsanamo" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" fill="currentColor"/>
+                                </svg>
+                            <a href="https://www.facebook.com/kartersanamo05/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="currentColor"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Karter Sanamo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/script.js?v=3.1"></script>
+</body>
+</html>
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Tables — Karter Sanamo</title>
+    <meta name="description" content="Change Tables: a Python utility that transforms PLC export text files using configurable rules.json for the ECO automation team.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles.css?v=3.1">
+    <link rel="stylesheet" href="/project-detail.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="project-detail-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-initials">KS</span>
+                <span class="logo-name">Karter Sanamo</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+                <li><a href="/#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main class="pd-main">
+        <header class="pd-hero">
+            <div class="container">
+                <div class="pd-hero-inner">
+                    <a href="/projects" class="pd-back">← All projects</a>
+                    <p class="pd-eyebrow">Python · PLC exports · Tkinter</p>
+                    <h1 class="pd-title">Change Tables</h1>
+                    <p class="pd-lead">A lightweight Python utility that ingests PLC export text files and applies configurable transformation rules from <code>rules.json</code>—streamlining data conversion workflows for the ECO automation team.</p>
+                    <div class="pd-meta">
+                        <span class="pd-meta-pill">Python 3</span>
+                        <span class="pd-meta-pill">Tkinter GUI</span>
+                        <span class="pd-meta-pill">PLC / SCADA</span>
+                        <span class="pd-meta-pill pd-meta-pill--accent">Open source</span>
+                    </div>
+                    <div class="pd-actions">
+                        <a class="pd-btn pd-btn--primary" href="https://github.com/kartersanamo/Change-Tables" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                        <a class="pd-btn pd-btn--ghost" href="https://github.com/kartersanamo/Change-Tables/blob/main/README.md" target="_blank" rel="noopener noreferrer">README</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container pd-body">
+            <section class="pd-section">
+                <h2>Overview</h2>
+                <p>PLC exports often need repeatable, rule-driven edits before they land in Proficy, Cimplicity, or other downstream tooling. Change Tables turns that work into a small desktop app: pick an input <code>.txt</code>, choose an output path, and apply a rules file—no code changes when the conversion recipe evolves.</p>
+            </section>
+
+            <section class="pd-section">
+                <h2>What I built</h2>
+                <ul class="pd-list">
+                    <li><strong>Tkinter workflow</strong> — select input file, output destination, and optional custom <code>rules.json</code>, then click <em>Apply Changes</em>.</li>
+                    <li><strong>Line rules</strong> — when a line contains a <code>find</code> string, replace the entire line with <code>replace</code> (evaluated top to bottom).</li>
+                    <li><strong>Global rules</strong> — find-and-replace across the full file after line rules run.</li>
+                    <li><strong><code>word_30_fallback</code></strong> — optional pass that converts leftover <code>*_WORD_30</code> tokens (e.g. <code>FOO_WORD_30</code> → <code>FOO_WORD 1</code>).</li>
+                    <li><strong>Data-driven config</strong> — operators add, remove, or edit entries in JSON; the engine stays the same.</li>
+                </ul>
+            </section>
+
+            <div class="pd-grid-2">
+                <div class="pd-card">
+                    <h3>Architecture</h3>
+                    <p>Processing is split across <code>rules.py</code> (rule loading), <code>engine.py</code> (transformation pipeline), and <code>change_tables.py</code> with <code>main.py</code> wiring the GUI—keeping conversion logic separate from the interface.</p>
+                </div>
+                <div class="pd-card">
+                    <h3>Rules format</h3>
+                    <p><code>rules.json</code> holds <code>lines</code>, <code>global</code>, and <code>word_30_fallback</code>. Teams can version rule sets per project or site without touching Python.</p>
+                </div>
+            </div>
+
+            <section class="pd-section" style="margin-top: 3rem;">
+                <h2>Run it</h2>
+                <p>Requires Python 3 and tkinter (bundled with most installs). From the repo root:</p>
+                <div class="pd-highlight"><code>python3 main.py</code> — choose input <code>.txt</code>, output path, and apply. Rules load from <code>rules.json</code> by default or from a file you pick in the GUI.</div>
+            </section>
+
+            <footer class="pd-links-footer">
+                <h2>Links</h2>
+                <div class="pd-link-row">
+                    <a href="https://github.com/kartersanamo/Change-Tables" target="_blank" rel="noopener noreferrer">Repository</a>
+                    <a href="https://github.com/kartersanamo/Change-Tables/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation (README)</a>
+                    <a href="/projects">← Back to projects</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Karter Sanamo. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/script.js?v=3.1"></script>
+</body>
+</html>

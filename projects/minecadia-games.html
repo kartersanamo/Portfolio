@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecadia Games — Karter Sanamo</title>
+    <meta name="description" content="Minecadia Games: Discord leveling, live leaderboard, and 10+ mini-games for the Minecadia community.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles.css?v=3.1">
+    <link rel="stylesheet" href="/project-detail.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="project-detail-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-initials">KS</span>
+                <span class="logo-name">Karter Sanamo</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+                <li><a href="/#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main class="pd-main">
+        <header class="pd-hero">
+            <div class="container">
+                <div class="pd-hero-inner">
+                    <a href="/projects" class="pd-back">← All projects</a>
+                    <p class="pd-eyebrow">Discord · Python</p>
+                    <h1 class="pd-title">Minecadia Games</h1>
+                    <p class="pd-lead">A community hub bot that turns Discord into an arcade: persistent XP and levels, a real-time leaderboard, and a growing library of games—built to stay fun under real concurrent load.</p>
+                    <div class="pd-meta">
+                        <span class="pd-meta-pill">discord.py</span>
+                        <span class="pd-meta-pill">Async Python</span>
+                        <span class="pd-meta-pill">PostgreSQL-ready patterns</span>
+                        <span class="pd-meta-pill pd-meta-pill--accent">Live product</span>
+                    </div>
+                    <div class="pd-actions">
+                        <a class="pd-btn pd-btn--primary" href="https://github.com/kartersanamo/MinecadiaGames" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                        <a class="pd-btn pd-btn--ghost" href="https://discord.com/invite/minecadia" target="_blank" rel="noopener noreferrer">Join Discord</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container pd-body">
+            <section class="pd-section">
+                <h2>Overview</h2>
+                <p>Minecadia Games anchors engagement for the Minecadia Discord: members earn XP for participation, climb a visible leaderboard, and drop into lightweight games without leaving the server. The goal was retention mechanics that feel fair, transparent, and easy to moderate.</p>
+            </section>
+
+            <section class="pd-section">
+                <h2>What I built</h2>
+                <ul class="pd-list">
+                    <li><strong>Progression core</strong> — XP awards, level curves, and per-member state with clear rules for farming prevention.</li>
+                    <li><strong>Leaderboard</strong> — live-updating presentation (embeds / components) so rankings stay readable as the member list grows.</li>
+                    <li><strong>10+ game modes</strong> — modular command and session flow so new games plug in without rewriting the progression layer.</li>
+                    <li><strong>Operational hooks</strong> — staff-facing behaviors and logging-oriented structure for a busy community server.</li>
+                </ul>
+            </section>
+
+            <div class="pd-grid-2">
+                <div class="pd-card">
+                    <h3>Engineering</h3>
+                    <p>discord.py’s async model drives the bot; work is split into cohesive cogs/services so game logic doesn’t entangle with transport code (interactions, messages, rate limits).</p>
+                </div>
+                <div class="pd-card">
+                    <h3>UX</h3>
+                    <p>Copy, error paths, and command discoverability were tuned for players who won’t read a manual—short feedback loops and consistent embed formatting.</p>
+                </div>
+            </div>
+
+            <section class="pd-section" style="margin-top: 3rem;">
+                <h2>Outcomes</h2>
+                <p>The bot supports a long-running community workload: concurrent sessions, predictable command latency, and room to extend seasonal events or new mechanics without breaking the leveling contract players rely on.</p>
+                <div class="pd-highlight"><strong>Takeaway:</strong> treating <em>XP rules</em> as a small domain model (inputs, caps, events) early made balancing and debugging much cheaper than scattering arithmetic across commands.</div>
+            </section>
+
+            <footer class="pd-links-footer">
+                <h2>Links</h2>
+                <div class="pd-link-row">
+                    <a href="https://github.com/kartersanamo/MinecadiaGames" target="_blank" rel="noopener noreferrer">Repository</a>
+                    <a href="https://discord.com/invite/minecadia" target="_blank" rel="noopener noreferrer">Minecadia Discord</a>
+                    <a href="/projects">← Back to projects</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Karter Sanamo. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/script.js?v=3.1"></script>
+</body>
+</html>

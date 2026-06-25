@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecadia Utilities — Karter Sanamo</title>
+    <meta name="description" content="Minecadia Utilities: Discord bot for polls, tags, suggestions, screenshare logging, player counts, and Telegram integration on the Minecadia network.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles.css?v=3.1">
+    <link rel="stylesheet" href="/project-detail.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="project-detail-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-initials">KS</span>
+                <span class="logo-name">Karter Sanamo</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+                <li><a href="/#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main class="pd-main">
+        <header class="pd-hero">
+            <div class="container">
+                <div class="pd-hero-inner">
+                    <a href="/projects" class="pd-back">← All projects</a>
+                    <p class="pd-eyebrow">Discord · Python</p>
+                    <h1 class="pd-title">Minecadia Utilities</h1>
+                    <p class="pd-lead">A Python Discord bot powering community utilities for the Minecadia network—polls, tags, suggestions, screenshare logging, message tracking, player counts, and Telegram integration.</p>
+                    <div class="pd-meta">
+                        <span class="pd-meta-pill">discord.py</span>
+                        <span class="pd-meta-pill">Python</span>
+                        <span class="pd-meta-pill">MySQL</span>
+                        <span class="pd-meta-pill pd-meta-pill--accent">Live product</span>
+                    </div>
+                    <div class="pd-actions">
+                        <a class="pd-btn pd-btn--primary" href="https://github.com/kartersanamo/MinecadiaUtilities" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                        <a class="pd-btn pd-btn--ghost" href="https://discord.com/invite/minecadia" target="_blank" rel="noopener noreferrer">Join Discord</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container pd-body">
+            <section class="pd-section">
+                <h2>Overview</h2>
+                <p>While Games and Tickets handle play and support, Utilities is the day-to-day glue for Minecadia: community input (polls, suggestions), staff workflows (tags, embed builder), and cross-platform signals (player counts, Telegram). It is built as a cog-based discord.py bot with clear separation between UI, services, and data access.</p>
+            </section>
+
+            <section class="pd-section">
+                <h2>What I built</h2>
+                <ul class="pd-list">
+                    <li><strong>Community tools</strong> — polls, tag management, suggestions, and an embed builder for consistent announcements.</li>
+                    <li><strong>Staff &amp; moderation helpers</strong> — screenshare logging, message counter, sync tools, and utility commands for operators.</li>
+                    <li><strong>Live server metrics</strong> — player count integration so Discord reflects Minecraft network status.</li>
+                    <li><strong>Telegram bridge</strong> — integration hooks so alerts and workflows can reach channels outside Discord.</li>
+                    <li><strong>Configurable deployment</strong> — <code>.env</code> for secrets and <code>assets/config.json</code> for channels, roles, and Trello boards.</li>
+                </ul>
+            </section>
+
+            <div class="pd-grid-2">
+                <div class="pd-card">
+                    <h3>Architecture</h3>
+                    <p>Organized into <code>cogs/</code>, <code>core/</code>, <code>services/</code>, <code>repositories/</code>, and <code>ui/</code>—commands stay thin while business logic and persistence live in dedicated layers.</p>
+                </div>
+                <div class="pd-card">
+                    <h3>Operations</h3>
+                    <p>Standard <code>pip install -r requirements.txt</code>, <code>.env</code> from <code>.env.example</code>, and <code>python main.py</code> (or <code>run.sh</code>) for production-style launches on the fleet host.</p>
+                </div>
+            </div>
+
+            <section class="pd-section" style="margin-top: 3rem;">
+                <h2>Part of the fleet</h2>
+                <p>Utilities runs alongside Minecadia Games, Tickets, and Management—managed from the <a href="/projects/bots">Bots dashboard</a> when operators need restarts, configs, or analytics context.</p>
+                <div class="pd-highlight"><strong>Takeaway:</strong> a utilities bot succeeds when <em>every feature is independently togglable</em> via config—channels, roles, and webhooks should not require code edits when staff reorganize the server.</div>
+            </section>
+
+            <footer class="pd-links-footer">
+                <h2>Links</h2>
+                <div class="pd-link-row">
+                    <a href="https://github.com/kartersanamo/MinecadiaUtilities" target="_blank" rel="noopener noreferrer">Repository</a>
+                    <a href="https://github.com/kartersanamo/MinecadiaUtilities/blob/master/README.md" target="_blank" rel="noopener noreferrer">Documentation (README)</a>
+                    <a href="https://discord.com/invite/minecadia" target="_blank" rel="noopener noreferrer">Minecadia Discord</a>
+                    <a href="/projects">← Back to projects</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Karter Sanamo. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/script.js?v=3.1"></script>
+</body>
+</html>

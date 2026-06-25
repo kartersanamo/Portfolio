@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecadia Tickets — Karter Sanamo</title>
+    <meta name="description" content="Minecadia Tickets: a highly customizable Discord ticket system built for serious support workflows.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles.css?v=3.1">
+    <link rel="stylesheet" href="/project-detail.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="project-detail-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-initials">KS</span>
+                <span class="logo-name">Karter Sanamo</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+                <li><a href="/#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main class="pd-main">
+        <header class="pd-hero">
+            <div class="container">
+                <div class="pd-hero-inner">
+                    <a href="/projects" class="pd-back">← All projects</a>
+                    <p class="pd-eyebrow">Discord · Python</p>
+                    <h1 class="pd-title">Minecadia Tickets</h1>
+                    <p class="pd-lead">A ticket system built for scale and taste: players get frictionless intake, staff get powerful controls, and administrators get configuration that maps to how their community actually runs support.</p>
+                    <div class="pd-meta">
+                        <span class="pd-meta-pill">discord.py</span>
+                        <span class="pd-meta-pill">Panels &amp; routing</span>
+                        <span class="pd-meta-pill">Moderation-aware</span>
+                        <span class="pd-meta-pill pd-meta-pill--accent">Production</span>
+                    </div>
+                    <div class="pd-actions">
+                        <a class="pd-btn pd-btn--primary" href="https://github.com/kartersanamo/MinecadiaTickets" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                        <a class="pd-btn pd-btn--ghost" href="https://discord.com/invite/Minecadia" target="_blank" rel="noopener noreferrer">Join Discord</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container pd-body">
+            <section class="pd-section">
+                <h2>Problem space</h2>
+                <p>Support volume on large Discords breaks when threads are ad-hoc: duplicate tickets, unclear ownership, and brittle permission setups. Minecadia Tickets focuses on predictable lifecycle—open, claim, collaborate, close—with guardrails against the usual failure modes.</p>
+            </section>
+
+            <section class="pd-section">
+                <h2>What I built</h2>
+                <ul class="pd-list">
+                    <li><strong>Guided creation</strong> — category-aware ticket channels (or threads), with prompts that gather context upfront.</li>
+                    <li><strong>Staff tooling</strong> — claim, reassign, internal notes patterns, and closure flows that keep history coherent.</li>
+                    <li><strong>Customization layer</strong> — configurable messages, panel layouts, and behavior toggles so the same codebase serves different communities.</li>
+                    <li><strong>Polished UX</strong> — interactions, embeds, and feedback tuned so members always know what happened and what to do next.</li>
+                </ul>
+            </section>
+
+            <div class="pd-grid-2">
+                <div class="pd-card">
+                    <h3>Reliability</h3>
+                    <p>Defensive handling around Discord API constraints and permission mismatches—failures degrade to clear staff-visible errors instead of silent breakage.</p>
+                </div>
+                <div class="pd-card">
+                    <h3>Maintainability</h3>
+                    <p>Ticket state is modeled explicitly so adding automations (SLA reminders, logging webhooks, transcripts) doesn’t require rewriting the core flow.</p>
+                </div>
+            </div>
+
+            <section class="pd-section" style="margin-top: 3rem;">
+                <h2>Developer perspective</h2>
+                <p>This project blends product thinking with backend discipline: every feature is measured against moderator workflows, not just Discord API capability. The result is a system that feels “native” to Minecadia rather than a generic clone.</p>
+                <div class="pd-highlight"><strong>Takeaway:</strong> investing in a <em>single, explicit state machine</em> for tickets (who owns it, who can see it, how it closes) pays off the moment you add your third customization flag.</div>
+            </section>
+
+            <footer class="pd-links-footer">
+                <h2>Links</h2>
+                <div class="pd-link-row">
+                    <a href="https://github.com/kartersanamo/MinecadiaTickets" target="_blank" rel="noopener noreferrer">Repository</a>
+                    <a href="https://discord.com/invite/Minecadia" target="_blank" rel="noopener noreferrer">Minecadia Discord</a>
+                    <a href="/projects">← Back to projects</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Karter Sanamo. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/script.js?v=3.1"></script>
+</body>
+</html>

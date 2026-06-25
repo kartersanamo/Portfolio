@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stash - Karter Sanamo</title>
+    <meta name="description" content="Stash: a GUI-first Spigot storage plugin roadmap for personal vaults, safe persistence, and admin-grade tooling.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles.css?v=3.1">
+    <link rel="stylesheet" href="/project-detail.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="project-detail-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-initials">KS</span>
+                <span class="logo-name">Karter Sanamo</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+                <li><a href="/#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main class="pd-main">
+        <header class="pd-hero">
+            <div class="container">
+                <div class="pd-hero-inner">
+                    <a href="/projects" class="pd-back"><- All projects</a>
+                    <p class="pd-eyebrow">Minecraft - Java - Storage platform</p>
+                    <h1 class="pd-title">Stash</h1>
+                    <p class="pd-lead">Stash is a GUI-first personal vault plugin roadmap for Spigot servers, designed to scale from simple player storage to a full ecosystem with strong persistence safety, flexible permissions, and admin recovery tools.</p>
+                    <div class="pd-meta">
+                        <span class="pd-meta-pill">Spigot / Bukkit API</span>
+                        <span class="pd-meta-pill">Java</span>
+                        <span class="pd-meta-pill">Maven</span>
+                        <span class="pd-meta-pill pd-meta-pill--accent">v1.0.0 released</span>
+                    </div>
+                    <div class="pd-actions">
+                        <a class="pd-btn pd-btn--primary" href="https://github.com/kartersanamo/Stash" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                        <a class="pd-btn pd-btn--ghost" href="https://github.com/kartersanamo/Stash/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">Release v1.0.0</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container pd-body">
+            <section class="pd-section">
+                <h2>Why this project</h2>
+                <p>Most vault plugins cover only the basics. Stash is aimed at servers that need a cleaner player experience and stronger operational controls: structured GUI navigation, scalable page/tier permissions, and data safety as a first-class requirement.</p>
+            </section>
+
+            <section class="pd-section">
+                <h2>What I built and planned</h2>
+                <ul class="pd-list">
+                    <li><strong>Personal vault workflows</strong> - roadmap around <code>/pv</code> access, page-based vault expansion, and per-player stored layouts.</li>
+                    <li><strong>GUI-first management</strong> - inventory UIs with navigation controls, confirmation states, and future search/filter support.</li>
+                    <li><strong>Safety-focused persistence</strong> - versioned storage model with migration planning, autosave boundaries, and backup-friendly behavior.</li>
+                    <li><strong>Admin toolkit direction</strong> - inspect player vaults, restore snapshots, and track item movement through audit trails.</li>
+                    <li><strong>Scalable architecture</strong> - service-oriented plugin layout designed to grow toward shared vaults and network-grade storage.</li>
+                </ul>
+            </section>
+
+            <div class="pd-grid-2">
+                <div class="pd-card">
+                    <h3>Architecture</h3>
+                    <p>Stash is structured toward clear service boundaries: command handlers, GUI management, storage serialization, config-driven behavior, and an audit layer. The goal is readable modules that can evolve without breaking old data.</p>
+                </div>
+                <div class="pd-card">
+                    <h3>Server operator value</h3>
+                    <p>Server owners get more than storage slots. The roadmap emphasizes permission tiering, customizable menu behavior, reliable save/recovery flows, and admin-grade controls for moderation and support use cases.</p>
+                </div>
+            </div>
+
+            <section class="pd-section" style="margin-top: 3rem;">
+                <h2>Technical notes</h2>
+                <p>The repository currently starts as a lightweight plugin skeleton, with the README defining the long-range plan: robust personal vaults first, then enhanced UX, recovery/audit capabilities, and potential cross-server synchronization.</p>
+                <div class="pd-highlight"><strong>Result:</strong> Stash establishes a strong foundation and clear roadmap for a premium storage platform that can scale with server complexity.</div>
+            </section>
+
+            <footer class="pd-links-footer">
+                <h2>Links</h2>
+                <div class="pd-link-row">
+                    <a href="https://github.com/kartersanamo/Stash" target="_blank" rel="noopener noreferrer">Repository</a>
+                    <a href="https://github.com/kartersanamo/Stash/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation (README)</a>
+                    <a href="/projects"><- Back to projects</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Karter Sanamo. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/script.js?v=3.1"></script>
+</body>
+</html>

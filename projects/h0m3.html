@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H0M3 — Karter Sanamo</title>
+    <meta name="description" content="H0M3: a Spigot/Paper homes plugin with GUI management, teleport effects, and full configuration.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles.css?v=3.1">
+    <link rel="stylesheet" href="/project-detail.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="project-detail-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-initials">KS</span>
+                <span class="logo-name">Karter Sanamo</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+                <li><a href="/#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main class="pd-main">
+        <header class="pd-hero">
+            <div class="container">
+                <div class="pd-hero-inner">
+                    <a href="/projects" class="pd-back">← All projects</a>
+                    <p class="pd-eyebrow">Minecraft · Java</p>
+                    <h1 class="pd-title">H0M3</h1>
+                    <p class="pd-lead">Production-ready home management for Spigot and Paper: multiple homes per player, inventory GUIs, polished teleport flow, and server-owner-friendly configuration—without sacrificing clarity in the codebase.</p>
+                    <div class="pd-meta">
+                        <span class="pd-meta-pill">Spigot / Paper API</span>
+                        <span class="pd-meta-pill">Java 21+</span>
+                        <span class="pd-meta-pill">Minecraft 1.21+</span>
+                        <span class="pd-meta-pill pd-meta-pill--accent">Open source</span>
+                    </div>
+                    <div class="pd-actions">
+                        <a class="pd-btn pd-btn--primary" href="https://github.com/kartersanamo/H0M3" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                        <a class="pd-btn pd-btn--ghost" href="https://github.com/kartersanamo/H0M3/releases" target="_blank" rel="noopener noreferrer">Releases</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container pd-body">
+            <section class="pd-section">
+                <h2>Why this project</h2>
+                <p>Most servers need homes that scale beyond a single <code>/sethome</code> — players expect naming, limits, GUIs, and staff-tunable behavior. H0M3 is my answer: a cohesive plugin that treats homes as first-class data (metadata, timestamps, display settings) rather than a flat teleport map.</p>
+            </section>
+
+            <section class="pd-section">
+                <h2>What I built</h2>
+                <ul class="pd-list">
+                    <li><strong>Full CRUD for homes</strong> — create, rename, move, delete, and teleport with permission gates at every step.</li>
+                    <li><strong>Dual GUIs</strong> — a grid of all homes plus a per-home management screen (material, lore, location, info).</li>
+                    <li><strong>Teleport pipeline</strong> — optional countdown, movement cancellation, arrival and countdown particles/sounds from config.</li>
+                    <li><strong>Messages &amp; config</strong> — split <code>config.yml</code> / <code>messages.yml</code> with admin reload so copy can be iterated without recompiling.</li>
+                    <li><strong>Persistent storage</strong> — per-player data loaded on join and saved consistently across restarts.</li>
+                </ul>
+            </section>
+
+            <div class="pd-grid-2">
+                <div class="pd-card">
+                    <h3>Architecture</h3>
+                    <p>Command layer delegates to services for homes, effects, and messaging so gameplay rules stay testable and easy to extend (e.g. new subcommands or storage backends).</p>
+                </div>
+                <div class="pd-card">
+                    <h3>Operator experience</h3>
+                    <p>Length limits, max home counts, default GUI materials, and effect tuning are all data-driven—useful for networks that want strict prod/stage parity.</p>
+                </div>
+            </div>
+
+            <section class="pd-section" style="margin-top: 3rem;">
+                <h2>Technical notes</h2>
+                <p>Built against the Paper ecosystem where it matters (modern event usage, safe teleport scheduling). Effects lean on the Bukkit particle/sound enums you already know, with validation-friendly names in YAML.</p>
+                <div class="pd-highlight"><strong>Lesson learned:</strong> separating <em>player-facing strings</em> from <em>balance knobs</em> early avoided a mess of magic numbers in Java and made the plugin approachable for non-developer server owners.</div>
+            </section>
+
+            <footer class="pd-links-footer">
+                <h2>Links</h2>
+                <div class="pd-link-row">
+                    <a href="https://github.com/kartersanamo/H0M3" target="_blank" rel="noopener noreferrer">Repository</a>
+                    <a href="https://github.com/kartersanamo/H0M3/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation (README)</a>
+                    <a href="/projects">← Back to projects</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Karter Sanamo. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/script.js?v=3.1"></script>
+</body>
+</html>

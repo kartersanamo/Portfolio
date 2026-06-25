@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Six Stars Hotel — Karter Sanamo</title>
+    <meta name="description" content="Six Stars Hotel: a Swing-based desktop hotel client with SQLite storage and role-based flows for guests, clerks, and administrators.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles.css?v=3.1">
+    <link rel="stylesheet" href="/project-detail.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="project-detail-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-initials">KS</span>
+                <span class="logo-name">Karter Sanamo</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+                <li><a href="/#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main class="pd-main">
+        <header class="pd-hero">
+            <div class="container">
+                <div class="pd-hero-inner">
+                    <a href="/projects" class="pd-back">← All projects</a>
+                    <p class="pd-eyebrow">Featured project · Java · Desktop hotel operations</p>
+                    <h1 class="pd-title">Six Stars Hotel</h1>
+                    <p class="pd-lead">Six Stars Hotel is a single-property desktop client for managing reservations, guest stays, billing, and account flows. It uses a Swing UI, SQLite persistence, and role-based navigation for guests, clerks, and administrators.</p>
+                    <div class="pd-meta">
+                        <span class="pd-meta-pill">Swing UI</span>
+                        <span class="pd-meta-pill">SQLite</span>
+                        <span class="pd-meta-pill">JDK 25</span>
+                        <span class="pd-meta-pill pd-meta-pill--accent">Featured project</span>
+                    </div>
+                    <div class="pd-actions">
+                        <a class="pd-btn pd-btn--primary" href="https://github.com/kartersanamo/6-Stars" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                        <a class="pd-btn pd-btn--ghost" href="https://github.com/kartersanamo/6-Stars/blob/main/README.md" target="_blank" rel="noopener noreferrer">Read the README</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container pd-body">
+            <section class="pd-section">
+                <h2>Project summary</h2>
+                <p>The app is designed around a single hotel property, with separate flows for guests, clerks, and administrators. That keeps the UI focused while still covering the core operational loop: account access, booking, stay management, and staff tooling.</p>
+            </section>
+
+            <section class="pd-section">
+                <h2>What I built</h2>
+                <ul class="pd-list">
+                    <li><strong>Role-based flows</strong> - guest, clerk, and administrator experiences that route users to the right screens and tools.</li>
+                    <li><strong>Reservation workflow</strong> - booking and stay management with the data stored in SQLite.</li>
+                    <li><strong>Billing and account surfaces</strong> - guest billing, account center access, and supporting views for hotel operations.</li>
+                    <li><strong>Desktop-first UI</strong> - Swing-based interface built for a local application rather than a browser.</li>
+                    <li><strong>Launch-time data handling</strong> - opens or creates the SQLite database locally, with a fallback copy available from bundled resources.</li>
+                </ul>
+            </section>
+
+            <div class="pd-grid-2">
+                <div class="pd-card">
+                    <h3>Architecture</h3>
+                    <p>The project is organized around service and DAO layers so the hotel logic stays separated from the UI. That makes the reservation, billing, and account flows easier to reason about and extend.</p>
+                </div>
+                <div class="pd-card">
+                    <h3>Why it stands out</h3>
+                    <p>Unlike a web demo, this is a full desktop client with persistence, role-aware behavior, and real launch-time setup concerns. It reads like a compact operations tool instead of a toy example.</p>
+                </div>
+            </div>
+
+            <section class="pd-section" style="margin-top: 3rem;">
+                <h2>Technical notes</h2>
+                <p>The README describes JDK 25, Maven 3.x, SQLite storage, and optional configuration for external services. The application also supports packaged distribution as a runnable jar-with-dependencies.</p>
+                <div class="pd-highlight"><strong>Result:</strong> Six Stars Hotel became the main featured project on the site because it shows a complete desktop application with a stronger systems feel than a simple landing-page demo.</div>
+            </section>
+
+            <footer class="pd-links-footer">
+                <h2>Links</h2>
+                <div class="pd-link-row">
+                    <a href="https://github.com/kartersanamo/6-Stars" target="_blank" rel="noopener noreferrer">Repository</a>
+                    <a href="https://github.com/kartersanamo/6-Stars/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation (README)</a>
+                    <a href="/projects">← Back to projects</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Karter Sanamo. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/script.js?v=3.1"></script>
+</body>
+</html>

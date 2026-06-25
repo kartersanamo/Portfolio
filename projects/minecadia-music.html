@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecadia Music — Karter Sanamo</title>
+    <meta name="description" content="Minecadia Music: Lavalink-powered Discord music bot with /music panel, web dashboard, and Discord Activity support.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles.css?v=3.1">
+    <link rel="stylesheet" href="/project-detail.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="project-detail-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-initials">KS</span>
+                <span class="logo-name">Karter Sanamo</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+                <li><a href="/#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main class="pd-main">
+        <header class="pd-hero">
+            <div class="container">
+                <div class="pd-hero-inner">
+                    <a href="/projects" class="pd-back">← All projects</a>
+                    <p class="pd-eyebrow">Featured project · Discord · Lavalink</p>
+                    <h1 class="pd-title">Minecadia Music</h1>
+                    <p class="pd-lead">A Discord music bot for Minecadia with a Lavalink-powered player, an in-channel <code>/music</code> panel, a full web dashboard, and Discord Activity support—so members can queue, control playback, and launch the dashboard without leaving the server.</p>
+                    <div class="pd-meta">
+                        <span class="pd-meta-pill">discord.py</span>
+                        <span class="pd-meta-pill">Lavalink</span>
+                        <span class="pd-meta-pill">Web dashboard</span>
+                        <span class="pd-meta-pill">Discord Activity</span>
+                        <span class="pd-meta-pill pd-meta-pill--accent">Featured project</span>
+                    </div>
+                    <div class="pd-actions">
+                        <a class="pd-btn pd-btn--primary" href="https://github.com/kartersanamo/MinecadiaMusic" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                        <a class="pd-btn pd-btn--ghost" href="https://music.kartersanamo.com" target="_blank" rel="noopener noreferrer">Open dashboard</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container pd-body">
+            <section class="pd-section">
+                <h2>Overview</h2>
+                <p>Music was split out of Utilities into its own application so playback, Lavalink, OAuth, and the dashboard could evolve independently. The bot exposes a Components V2 <code>/music</code> panel in Discord, streams from YouTube and SoundCloud through Lavalink, and serves a production dashboard at <a href="https://music.kartersanamo.com" target="_blank" rel="noopener noreferrer">music.kartersanamo.com</a>—including launch as a Discord Activity from the panel or app launcher.</p>
+            </section>
+
+            <section class="pd-section">
+                <h2>What I built</h2>
+                <ul class="pd-list">
+                    <li><strong>In-channel player</strong> — <code>/music</code> panel with queue and transport controls using Discord’s component system.</li>
+                    <li><strong>Lavalink backend</strong> — native or Docker Lavalink on port 2333 for reliable multi-source playback.</li>
+                    <li><strong>Web dashboard</strong> — OAuth-backed UI proxied through nginx to the bot’s HTTP server (default port 8790).</li>
+                    <li><strong>Discord Activity</strong> — portal URL mappings and Launch Dashboard flow so the same UI runs inside Discord on web and mobile.</li>
+                    <li><strong>Production ops</strong> — dedicated Discord app, guild slash sync, voice-channel status hints, and fleet deployment alongside other Minecadia bots.</li>
+                </ul>
+            </section>
+
+            <div class="pd-grid-2">
+                <div class="pd-card">
+                    <h3>Stack</h3>
+                    <p>Python bot (<code>cogs/</code>, <code>services/</code>, <code>ui/views</code>) plus a JavaScript dashboard, Lavalink config under <code>lavalink/</code>, and <code>docker/</code> compose for optional containerized audio nodes.</p>
+                </div>
+                <div class="pd-card">
+                    <h3>Configuration</h3>
+                    <p><code>.env</code> holds token, database, Lavalink, and OAuth vars; <code>assets/config.json</code> covers roles, music settings, and presence. See <code>.env.example</code> for the full production checklist.</p>
+                </div>
+            </div>
+
+            <section class="pd-section" style="margin-top: 3rem;">
+                <h2>Technical notes</h2>
+                <p>Migrating music to a standalone bot required coordinating Developer Portal Activities setup (Web/iOS/Android platforms, URL mappings, OAuth redirects) and de-registering the old <code>/music</code> command from Utilities via <code>/utilities-sync</code> after cutover.</p>
+                <div class="pd-highlight"><strong>Takeaway:</strong> a music bot is really <em>three products</em>—Discord UX, audio infrastructure (Lavalink), and a web surface (dashboard + Activity)—and they only feel seamless when OAuth, voice permissions, and nginx routing are planned together.</div>
+            </section>
+
+            <footer class="pd-links-footer">
+                <h2>Links</h2>
+                <div class="pd-link-row">
+                    <a href="https://github.com/kartersanamo/MinecadiaMusic" target="_blank" rel="noopener noreferrer">Repository</a>
+                    <a href="https://github.com/kartersanamo/MinecadiaMusic/blob/master/README.md" target="_blank" rel="noopener noreferrer">Documentation (README)</a>
+                    <a href="https://music.kartersanamo.com" target="_blank" rel="noopener noreferrer">Web dashboard</a>
+                    <a href="/projects/bots">Bots dashboard</a>
+                    <a href="/projects">← Back to projects</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Karter Sanamo. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/script.js?v=3.1"></script>
+</body>
+</html>

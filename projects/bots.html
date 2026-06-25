@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecadia Bots — Karter Sanamo</title>
+    <meta name="description" content="Minecadia Bots: Next.js dashboard for fleet control, tickets, games admin, analytics, and moderation—MySQL + FastAPI control layer.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles.css?v=3.1">
+    <link rel="stylesheet" href="/project-detail.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="project-detail-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-initials">KS</span>
+                <span class="logo-name">Karter Sanamo</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+                <li><a href="/#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main class="pd-main">
+        <header class="pd-hero">
+            <div class="container">
+                <div class="pd-hero-inner">
+                    <a href="/projects" class="pd-back">← All projects</a>
+                    <p class="pd-eyebrow">Next.js · MySQL · FastAPI</p>
+                    <h1 class="pd-title">Minecadia Bots</h1>
+                    <p class="pd-lead">A Next.js dashboard for managing the Minecadia Discord bot fleet—fleet controls, ticket management, games administration, member analytics, and moderation tools, backed by MySQL and a Python FastAPI control layer.</p>
+                    <div class="pd-meta">
+                        <span class="pd-meta-pill">Next.js / TypeScript</span>
+                        <span class="pd-meta-pill">MySQL</span>
+                        <span class="pd-meta-pill">FastAPI</span>
+                        <span class="pd-meta-pill">Discord OAuth</span>
+                        <span class="pd-meta-pill pd-meta-pill--accent">Production</span>
+                    </div>
+                    <div class="pd-actions">
+                        <a class="pd-btn pd-btn--primary" href="https://github.com/kartersanamo/Bots" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                        <a class="pd-btn pd-btn--ghost" href="https://github.com/kartersanamo/Bots/blob/master/README.md" target="_blank" rel="noopener noreferrer">README</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container pd-body">
+            <section class="pd-section">
+                <h2>Overview</h2>
+                <p>Minecadia runs multiple Discord bots (games, tickets, management, and more). This repo is the operator console: staff authenticate with Discord OAuth, inspect live data from MySQL, and drive bot processes through a local control API instead of SSH-ing into tmux sessions by hand.</p>
+            </section>
+
+            <section class="pd-section">
+                <h2>What I built</h2>
+                <ul class="pd-list">
+                    <li><strong>Fleet control</strong> — restart bots, edit configs, and attach to tmux consoles via the Python <code>control-api</code> service.</li>
+                    <li><strong>Tickets &amp; games admin</strong> — dashboard surfaces for ticket workflows and games bot settings, wired to per-bot HTTP APIs.</li>
+                    <li><strong>Analytics &amp; engagement</strong> — member message rollups with deduplicated history scans and live ingestion from Management.</li>
+                    <li><strong>Moderation tooling</strong> — guild-aware views backed by Discord API tokens and read/write MySQL roles.</li>
+                    <li><strong>Deploy pipeline</strong> — <code>npm run build</code> / <code>npm run deploy</code> plus scripts for analytics backfill and schema migrations.</li>
+                </ul>
+            </section>
+
+            <div class="pd-grid-2">
+                <div class="pd-card">
+                    <h3>Stack</h3>
+                    <p><code>src/</code> is the Next.js app (pages, API routes, components). <code>control-api/</code> is FastAPI for process control. Bot runtime code lives under <code>MINECADIA_BOTS_ROOT</code> outside this repo.</p>
+                </div>
+                <div class="pd-card">
+                    <h3>Data layer</h3>
+                    <p>Separate read and write DB credentials; analytics backfill respects load thresholds and message-ID dedup via <code>analytics_member_messages_seen</code>.</p>
+                </div>
+            </div>
+
+            <section class="pd-section" style="margin-top: 3rem;">
+                <h2>Technical notes</h2>
+                <p>Requires Node.js 20.9+, MySQL, and a Discord application (OAuth + bot token). Environment covers guild ID, control API secrets, and per-bot API endpoints for Games and Tickets.</p>
+                <div class="pd-highlight"><strong>Design choice:</strong> keep <em>dashboard UI</em> in Next.js while <em>process orchestration</em> stays in FastAPI—so the web app never shells into production hosts directly, but operators still get one pane of glass for the whole fleet.</div>
+            </section>
+
+            <footer class="pd-links-footer">
+                <h2>Links</h2>
+                <div class="pd-link-row">
+                    <a href="https://github.com/kartersanamo/Bots" target="_blank" rel="noopener noreferrer">Repository</a>
+                    <a href="https://github.com/kartersanamo/Bots/blob/master/README.md" target="_blank" rel="noopener noreferrer">Documentation (README)</a>
+                    <a href="https://discord.com/invite/minecadia" target="_blank" rel="noopener noreferrer">Minecadia Discord</a>
+                    <a href="/projects">← Back to projects</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Karter Sanamo. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/script.js?v=3.1"></script>
+</body>
+</html>

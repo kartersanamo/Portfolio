@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrayify — Karter Sanamo</title>
+    <meta name="description" content="Arrayify converts tank register spreadsheets into array-based rows, applies DOCX soundings, and normalizes register names to tags.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles.css?v=3.1">
+    <link rel="stylesheet" href="/project-detail.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="project-detail-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-initials">KS</span>
+                <span class="logo-name">Karter Sanamo</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+                <li><a href="/#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main class="pd-main">
+        <header class="pd-hero">
+            <div class="container">
+                <div class="pd-hero-inner">
+                    <a href="/projects" class="pd-back">← All projects</a>
+                    <p class="pd-eyebrow">Python · CSV tooling · Tkinter</p>
+                    <h1 class="pd-title">Arrayify</h1>
+                    <p class="pd-lead">Convert tank register spreadsheets into array-based rows, apply DOCX soundings, and normalize register names to tank tags. Lightweight CLI and optional Tkinter GUI.</p>
+                    <div class="pd-meta">
+                        <span class="pd-meta-pill">Python</span>
+                        <span class="pd-meta-pill">CSV</span>
+                        <span class="pd-meta-pill">Tkinter</span>
+                        <span class="pd-meta-pill pd-meta-pill--accent">NEW</span>
+                    </div>
+                    <div class="pd-actions">
+                        <a class="pd-btn pd-btn--primary" href="https://github.com/kartersanamo/Arrayify" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                        <a class="pd-btn pd-btn--ghost" href="https://raw.githubusercontent.com/kartersanamo/Arrayify/main/README.md" target="_blank" rel="noopener noreferrer">README</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container pd-body">
+            <section class="pd-section">
+                <h2>About</h2>
+                <p>Arrayify is a small utility written to automate conversions between tank register spreadsheets for ECO. It refactors single-address sounding variables into arrays, can apply new sounding values from .docx tables, and normalizes register names into tag-style identifiers.</p>
+            </section>
+
+            <section class="pd-section">
+                <h2>How it works</h2>
+                <ul class="pd-list">
+                    <li><strong>Arrayify</strong> — consolidates contiguous register addresses into array columns for compact, consistent spreadsheets.</li>
+                    <li><strong>Sounding</strong> — reads `.docx` tables and applies sounding values to matching rows.</li>
+                    <li><strong>Normalization</strong> — converts free-form register names to normalized tag names for downstream tooling.</li>
+                    <li><strong>Interfaces</strong> — runs via a CLI menu or an optional Tkinter GUI; designed to be packaged with PyInstaller.</li>
+                </ul>
+            </section>
+
+            <div class="pd-grid-2">
+                <div class="pd-card">
+                    <h3>Design</h3>
+                    <p>Workflows are implemented in `tank_tools.services` as single-responsibility classes: `ArrayifyService`, `TankSoundingService`, and `TagNormalizationService`.</p>
+                </div>
+                <div class="pd-card">
+                    <h3>Usage</h3>
+                    <p>Run `python main.py` for the CLI menu or `python main.py --gui` to launch the Tkinter interface. The tool uses only the Python standard library at runtime.</p>
+                </div>
+            </div>
+
+            <section class="pd-section" style="margin-top: 3rem;">
+                <h2>Why it matters</h2>
+                <p>Arrayify saves manual spreadsheet cleanup and reduces errors when producing tank register outputs for downstream systems. The optional sounding step integrates values from DOCX tables so workflows stay reproducible.</p>
+            </section>
+
+            <footer class="pd-links-footer">
+                <h2>Links</h2>
+                <div class="pd-link-row">
+                    <a href="https://github.com/kartersanamo/Arrayify" target="_blank" rel="noopener noreferrer">Repository</a>
+                    <a href="/projects">← Back to projects</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Karter Sanamo. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/script.js?v=3.1"></script>
+</body>
+</html>

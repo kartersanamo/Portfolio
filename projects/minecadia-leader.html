@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecadia Leader — Karter Sanamo</title>
+    <meta name="description" content="Minecadia Leader: Discord bot for faction leaders, staff channel management, and support workflows on the Minecadia Leader server.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles.css?v=3.1">
+    <link rel="stylesheet" href="/project-detail.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="project-detail-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-initials">KS</span>
+                <span class="logo-name">Karter Sanamo</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+                <li><a href="/#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main class="pd-main">
+        <header class="pd-hero">
+            <div class="container">
+                <div class="pd-hero-inner">
+                    <a href="/projects" class="pd-back">← All projects</a>
+                    <p class="pd-eyebrow">Discord · Python · Factions</p>
+                    <h1 class="pd-title">Minecadia Leader</h1>
+                    <p class="pd-lead">A Discord bot for managing faction leaders, staff channels, and support workflows on the Minecadia Leader server—kitmap tickets, channel tooling, and leader-facing admin commands.</p>
+                    <div class="pd-meta">
+                        <span class="pd-meta-pill">discord.py</span>
+                        <span class="pd-meta-pill">Python</span>
+                        <span class="pd-meta-pill">MySQL</span>
+                        <span class="pd-meta-pill pd-meta-pill--accent">Live product</span>
+                    </div>
+                    <div class="pd-actions">
+                        <a class="pd-btn pd-btn--primary" href="https://github.com/kartersanamo/MinecadiaLeader" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                        <a class="pd-btn pd-btn--ghost" href="https://github.com/kartersanamo/MinecadiaLeader/blob/master/README.md" target="_blank" rel="noopener noreferrer">README</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container pd-body">
+            <section class="pd-section">
+                <h2>Overview</h2>
+                <p>The Minecadia Leader Discord is where faction leadership and staff coordinate kitmap support. This bot keeps that server organized: ticket panels for bundle requests, tools to lock and reshape channels, and commands scoped to leaders and admins—not the same surface area as the main community bots.</p>
+            </section>
+
+            <section class="pd-section">
+                <h2>What I built</h2>
+                <ul class="pd-list">
+                    <li><strong>Kitmap bundle tickets</strong> — ticket panel and toggle flow for faction bundle support.</li>
+                    <li><strong>Faction leader tools</strong> — leader utilities and admin list management for trusted roles.</li>
+                    <li><strong>Channel operations</strong> — lock, close, rename, purge, and edit commands for staff workflows.</li>
+                    <li><strong>Thread &amp; request tooling</strong> — thread listing and staff request commands for faster triage.</li>
+                    <li><strong>Fleet-consistent architecture</strong> — <code>cogs/</code>, <code>services/</code>, <code>repositories/</code>, and <code>ui/</code> aligned with other Minecadia bots.</li>
+                </ul>
+            </section>
+
+            <div class="pd-grid-2">
+                <div class="pd-card">
+                    <h3>Configuration</h3>
+                    <p><code>.env</code> provides the Discord token and database credentials. <code>assets/config.json</code> holds presence and bot settings so operators can tune behavior without code changes.</p>
+                </div>
+                <div class="pd-card">
+                    <h3>Deployment</h3>
+                    <p><code>pip install -r requirements.txt</code>, copy <code>.env.example</code> to <code>.env</code>, then <code>python main.py</code> or <code>run.sh</code> on the fleet host—restartable from the <a href="/projects/bots">Bots dashboard</a>.</p>
+                </div>
+            </div>
+
+            <section class="pd-section" style="margin-top: 3rem;">
+                <h2>Technical notes</h2>
+                <p>Leader-server bots need tight permission boundaries: channel mutations and ticket flows must fail clearly when roles or channel types don’t match config, so staff aren’t left guessing why a command didn’t apply.</p>
+                <div class="pd-highlight"><strong>Takeaway:</strong> separating <em>leader-facing</em> and <em>staff-facing</em> command surfaces early keeps a small Discord from turning into a tangle of overlapping permissions.</div>
+            </section>
+
+            <footer class="pd-links-footer">
+                <h2>Links</h2>
+                <div class="pd-link-row">
+                    <a href="https://github.com/kartersanamo/MinecadiaLeader" target="_blank" rel="noopener noreferrer">Repository</a>
+                    <a href="https://github.com/kartersanamo/MinecadiaLeader/blob/master/README.md" target="_blank" rel="noopener noreferrer">Documentation (README)</a>
+                    <a href="/projects/bots">Bots dashboard</a>
+                    <a href="/projects">← Back to projects</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Karter Sanamo. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/script.js?v=3.1"></script>
+</body>
+</html>

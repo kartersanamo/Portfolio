@@ -1,0 +1,10 @@
+contact_handler.log
+contact_handler.pid
+start-contact-server.sh
+stop-contact-server.sh
+setup-server.sh
+START_WEBSITE
+update.md
+nginx-portfolio.conf
+.git
+.gitignore

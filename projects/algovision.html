@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoVision — Karter Sanamo</title>
+    <meta name="description" content="AlgoVision: in-world algorithm visualizations for Minecraft — sorting, graphs, pathfinding, and more.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles.css?v=3.1">
+    <link rel="stylesheet" href="/project-detail.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="project-detail-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-initials">KS</span>
+                <span class="logo-name">Karter Sanamo</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+                <li><a href="/#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main class="pd-main">
+        <header class="pd-hero">
+            <div class="container">
+                <div class="pd-hero-inner">
+                    <a href="/projects" class="pd-back">← All projects</a>
+                    <p class="pd-eyebrow">Minecraft · Java · CS education</p>
+                    <h1 class="pd-title">AlgoVision</h1>
+                    <p class="pd-lead">Turn a 3D block world into a live canvas for algorithms: define a region in-game, run a visualization, and watch data structures behave—with particles, sound, and timing you can feel.</p>
+                    <div class="pd-meta">
+                        <span class="pd-meta-pill">Spigot API</span>
+                        <span class="pd-meta-pill">Java</span>
+                        <span class="pd-meta-pill">Algorithms</span>
+                        <span class="pd-meta-pill pd-meta-pill--accent">Demo video</span>
+                    </div>
+                    <div class="pd-actions">
+                        <a class="pd-btn pd-btn--primary" href="https://github.com/kartersanamo/AlgoVision" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                        <a class="pd-btn pd-btn--ghost" href="https://youtu.be/0Du1ccKRRLU" target="_blank" rel="noopener noreferrer">Watch demo</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container pd-body">
+            <section class="pd-section">
+                <h2>Concept</h2>
+                <p>Classic algorithm teaching often stays abstract. AlgoVision bridges intuition and implementation: students (or curious players) select space in the world, then algorithms manipulate blocks or effects in sync with each step of the computation.</p>
+            </section>
+
+            <section class="pd-section">
+                <h2>What I built</h2>
+                <ul class="pd-list">
+                    <li><strong>Spatial selection</strong> — workflow to define and validate regions suitable for grid-based visuals.</li>
+                    <li><strong>Algorithm library</strong> — sorting, searching, graph traversals, pathfinding, and other patterns exposed through a consistent runner interface.</li>
+                    <li><strong>Sensory feedback</strong> — deliberate use of particles and audio so state changes are visible even from a distance.</li>
+                    <li><strong>Scheduling</strong> — tick-safe animation so the server stays responsive while demonstrations play out.</li>
+                </ul>
+            </section>
+
+            <div class="pd-grid-2">
+                <div class="pd-card">
+                    <h3>Rendering model</h3>
+                    <p>Step-wise updates map abstract algorithm events to block/particle operations, keeping the “physics” of the visualization decoupled from algorithm correctness.</p>
+                </div>
+                <div class="pd-card">
+                    <h3>Extensibility</h3>
+                    <p>New algorithms plug into the same pipeline—focus stays on the core steps and how they should be perceived in-world.</p>
+                </div>
+            </div>
+
+            <section class="pd-section" style="margin-top: 3rem;">
+                <h2>Why it matters</h2>
+                <p>AlgoVision is as much a software architecture exercise as a gameplay gimmick: bounded regions, cancellable runs, and predictable cleanup are mandatory when users can wander into half-finished animations.</p>
+                <div class="pd-highlight"><strong>Takeaway:</strong> the hardest part wasn’t the algorithms—it was making <em>every frame of the animation</em> reversible enough for multiplayer safety and server tick budgets.</div>
+            </section>
+
+            <footer class="pd-links-footer">
+                <h2>Links</h2>
+                <div class="pd-link-row">
+                    <a href="https://github.com/kartersanamo/AlgoVision" target="_blank" rel="noopener noreferrer">Repository</a>
+                    <a href="https://youtu.be/0Du1ccKRRLU" target="_blank" rel="noopener noreferrer">YouTube demo</a>
+                    <a href="/projects">← Back to projects</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Karter Sanamo. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/script.js?v=3.1"></script>
+</body>
+</html>

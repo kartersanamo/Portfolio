@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe — Karter Sanamo</title>
+    <meta name="description" content="Luxe: a premium cosmetics plugin for Spigot — visual flair with performance in mind.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/styles.css?v=3.1">
+    <link rel="stylesheet" href="/project-detail.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="project-detail-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-initials">KS</span>
+                <span class="logo-name">Karter Sanamo</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+                <li><a href="/#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="/#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main class="pd-main">
+        <header class="pd-hero">
+            <div class="container">
+                <div class="pd-hero-inner">
+                    <a href="/projects" class="pd-back">← All projects</a>
+                    <p class="pd-eyebrow">Minecraft · Java</p>
+                    <h1 class="pd-title">Luxe</h1>
+                    <p class="pd-lead">Cosmetics that feel premium in-game: particles, trails, and presentation layers that make a server memorable—without the lag spikes that give “effect plugins” a bad reputation.</p>
+                    <div class="pd-meta">
+                        <span class="pd-meta-pill">Spigot / Bukkit</span>
+                        <span class="pd-meta-pill">Java</span>
+                        <span class="pd-meta-pill">Cosmetics / FX</span>
+                        <span class="pd-meta-pill pd-meta-pill--accent">Performance-aware</span>
+                    </div>
+                    <div class="pd-actions">
+                        <a class="pd-btn pd-btn--primary" href="https://github.com/kartersanamo/Luxe" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container pd-body">
+            <section class="pd-section">
+                <h2>Product angle</h2>
+                <p>Cosmetics are monetization and identity—not fluff. Luxe targets servers that want an elevated look: clear previews, consistent quality, and behaviors that work alongside combat and minigame plugins.</p>
+            </section>
+
+            <section class="pd-section">
+                <h2>What I built</h2>
+                <ul class="pd-list">
+                    <li><strong>Cosmetic catalog</strong> — structured types of effects and items players can equip or preview.</li>
+                    <li><strong>Runtime discipline</strong> — batched or throttled effects where appropriate to reduce per-tick pressure.</li>
+                    <li><strong>Clean integration surface</strong> — commands/permissions designed for hub networks and rank ladders.</li>
+                    <li><strong>Maintainable core</strong> — separation between definition (what a cosmetic is) and execution (how it appears in the world).</li>
+                </ul>
+            </section>
+
+            <div class="pd-grid-2">
+                <div class="pd-card">
+                    <h3>Engineering priorities</h3>
+                    <p>Minimize allocations hot paths, respect view distance, and fail softly when clients can’t render certain combinations—especially on modded stacks.</p>
+                </div>
+                <div class="pd-card">
+                    <h3>Server owner story</h3>
+                    <p>Configuration emphasizes predictable defaults and escape hatches: enough structure for storefronts, enough hooks for custom ranks.</p>
+                </div>
+            </div>
+
+            <section class="pd-section" style="margin-top: 3rem;">
+                <h2>Behind the scenes</h2>
+                <p>Visual plugins age poorly when effects are hard-coded into commands. Luxe’s direction is data-driven cosmetics with a small runtime kernel—so adding a look doesn’t mean rewriting scheduler logic.</p>
+                <div class="pd-highlight"><strong>Takeaway:</strong> on multiplayer servers, <em>the worst bugs look like performance</em>—profiling and budgeting effects early matters as much as any particle preset.</div>
+            </section>
+
+            <footer class="pd-links-footer">
+                <h2>Links</h2>
+                <div class="pd-link-row">
+                    <a href="https://github.com/kartersanamo/Luxe" target="_blank" rel="noopener noreferrer">Repository</a>
+                    <a href="/projects">← Back to projects</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Karter Sanamo. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/script.js?v=3.1"></script>
+</body>
+</html>
